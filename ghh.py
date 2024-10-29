@@ -136,4 +136,49 @@ print("\nРасширенная матрица из A, B и C:\n", extended_matr
 rank_extended = np.linalg.matrix_rank(extended_matrix)
 print("\nРанг расширенной матрицы:", rank_extended)
 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 print("Задание 2")
+
+vector1 = np.array([-72, -79, 75, -85, -19, 57, 83])
+print("Вектор 1:", vector1)
+vector2 = np.array([-79, 9, 45, -10, -5, 47, -54])
+print("Вектор 2:", vector2)
+
+sum_vectors = vector1 + vector2
+print("\nСумма векторов:", sum_vectors)
+
+diff_vectors = vector1 - vector2
+print("Разность векторов:", diff_vectors)
+
+
+scaled_vector1 = k1 * vector1
+scaled_vector2 = k1 * vector2
+print(f"\nВектор 1, умноженный на {k1}:", scaled_vector1)
+print(f"Вектор 2, умноженный на {k1}:", scaled_vector2)
+
+norm_1 = np.linalg.norm(vector1, 1)       # 1-норма
+norm_2 = np.linalg.norm(vector1, 2)       # 2-норма
+norm_inf = np.linalg.norm(vector1, np.inf)  # Бесконечная норма
+norm_vector1 = norm_2
+
+print("1-норма:", norm_1)
+print("2-норма:", norm_2)
+print("Бесконечная норма:", norm_inf)
+
+norm_1 = np.linalg.norm(vector2, 1)       # 1-норма
+norm_2 = np.linalg.norm(vector2, 2)       # 2-норма
+norm_inf = np.linalg.norm(vector2, np.inf)  # Бесконечная норма
+norm_vector2 = norm_2
+
+print("1-норма:", norm_1)
+print("2-норма:", norm_2)
+print("Бесконечная норма:", norm_inf)
+
+scalar_product = np.dot(vector1, vector2)
+print("Скалярное произведение векторов:", scalar_product)
+
+cos_angle = scalar_product / (norm_vector1 * norm_vector2)
+angle_rad = np.arccos(cos_angle)  # Угол в радианах
+angle_deg = np.degrees(angle_rad)  # Угол в градусах
+print("\nУгол между векторами (в радианах):", angle_rad)
+print("Угол между векторами (в градусах):", angle_deg)
